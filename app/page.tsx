@@ -405,12 +405,12 @@ export default function Home() {
       </footer>
 
       <style jsx global>{`
-        .hero-phone-col { display: none; }
+        .hero-phone-col { display: flex; justify-content: center; margin-top: 32px; }
         @media (min-width: 768px) {
           .nav-links-desktop { display: flex !important; }
           .show-mobile { display: none !important; }
           .hero-grid { grid-template-columns: 1fr .85fr !important; }
-          .hero-phone-col { display: block !important; }
+          .hero-phone-col { margin-top: 0; }
         }
         @media (max-width: 767px) {
           .hide-mobile { display: none; }
