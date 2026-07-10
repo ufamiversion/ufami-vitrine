@@ -14,15 +14,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ufami — Achetez maintenant, payez en 30 jours",
   description: "La première plateforme Buy Now Pay Later de Côte d'Ivoire. Achetez vos produits et payez en tranches journalières via mobile money.",
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
-    ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
 };
 
 export default function RootLayout({
