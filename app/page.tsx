@@ -177,8 +177,8 @@ export default function Home() {
           </div>
 
           <div className="hero-phone-col">
-            <div style={{ width: 230, height: 440, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 36, padding: 16, margin: '0 auto', animation: 'float 4s ease-in-out infinite', overflow: 'hidden' }}>
-              <div style={{ background: 'rgba(255,255,255,.04)', borderRadius: 22, height: '100%', padding: 12, display: 'flex', flexDirection: 'column', gap: 8, overflow: 'hidden' }}>
+            <div style={{ width: 230, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 36, padding: 16, margin: '0 auto', animation: 'float 4s ease-in-out infinite' }}>
+              <div style={{ background: 'rgba(255,255,255,.04)', borderRadius: 22, padding: 14, display: 'flex', flexDirection: 'column', gap: 10 }}>
                 <div style={{ background: 'rgba(17,29,74,.8)', borderRadius: 12, padding: 10, flexShrink: 0 }}>
                   <div style={{ color: 'rgba(255,255,255,.4)', fontSize: 10, marginBottom: 3 }}>Bonjour Kouassi</div>
                   <div style={{ color: '#fff', fontSize: 15, fontWeight: 800 }}>Que cherchez-vous ?</div>
