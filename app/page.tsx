@@ -148,7 +148,7 @@ export default function Home() {
               Fini les fins de mois<br /><span style={{ color: '#F5C800' }}>qui font peur</span>
             </h1>
             <p style={{ color: 'rgba(255,255,255,.65)', fontSize: 16, lineHeight: 1.75, marginBottom: 32, maxWidth: 440 }}>
-              La premiere plateforme d'achat echelonne de Cote d'Ivoire. Payez progressivement a partir de 500 F, sur une periode allant jusqu'a 180 jours, et recevez votre produit une fois le paiement termine.
+              Vous travaillez dur, vous meritez mieux qu'attendre. Ce que vous voulez ne devrait pas dependre de votre salaire du mois. A partir de 500 F, prenez votre temps — pas votre argent.
             </p>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(245,200,0,.3)', borderRadius: 12, padding: '10px 16px', marginBottom: 28 }}>
               <div style={{ minWidth: 52, height: 34, padding: '0 10px', background: '#F5C800', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
@@ -412,7 +412,7 @@ export default function Home() {
                 <div style={{ width: 32, height: 32, background: '#F5C800', borderRadius: 7, display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 14, color: '#111D4A' }}>U</div>
                 <span style={{ color: '#fff', fontWeight: 900, fontSize: 18 }}>U'<span style={{ color: '#F5C800' }}>FAMI</span></span>
               </div>
-              <p style={{ fontSize: 13, lineHeight: 1.75, maxWidth: 250, marginBottom: 18, color: 'rgba(255,255,255,.55)' }}>La premiere plateforme BNPL de Cote d'Ivoire. Achetez maintenant, payez en 30 tranches journalieres.</p>
+              <p style={{ fontSize: 13, lineHeight: 1.75, maxWidth: 250, marginBottom: 18, color: 'rgba(255,255,255,.55)' }}>La premiere plateforme d'achat echelonne de Cote d'Ivoire. Payez a partir de 500 F, jusqu'a 180 jours.</p>
               <div style={{ display: 'flex', gap: 10 }}>
                 {[Globe, Camera, AtSign, Video].map((Icon, i) => (
                   <div key={i} style={{ width: 36, height: 36, background: 'rgba(255,255,255,.1)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(255,255,255,.6)' }}><Icon size={15} /></div>
