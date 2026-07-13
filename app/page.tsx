@@ -30,6 +30,21 @@ const PARTNERS = [
   { name: 'BioNaturel', cat: 'Beaute & Sante', color: '#16A34A', bg: '#F0FDF4' },
 ];
 
+const MOCK_PRODUCTS = [
+  { name: 'Ecouteurs Bluetooth', price: '15 000 F', rate: 'Des 500 F' },
+  { name: 'Chaussures Sport', price: '22 500 F', rate: 'Des 750 F' },
+  { name: 'Sac a main', price: '39 000 F', rate: 'Des 1 300 F' },
+  { name: 'Montre connectee', price: '45 000 F', rate: 'Des 1 500 F' },
+  { name: 'Casque audio Pro', price: '60 000 F', rate: 'Des 2 000 F' },
+  { name: 'Ventilateur sur pied', price: '85 000 F', rate: 'Des 2 800 F' },
+  { name: 'Smartphone Android', price: '120 000 F', rate: 'Des 4 000 F' },
+  { name: 'Mini refrigerateur', price: '150 000 F', rate: 'Des 5 000 F' },
+  { name: 'Television 43"', price: '210 000 F', rate: 'Des 7 000 F' },
+  { name: 'Machine a laver', price: '285 000 F', rate: 'Des 9 500 F' },
+  { name: 'iPhone 15 Pro', price: '575 000 F', rate: 'Des 10 000 F' },
+  { name: 'Moto rechargeable', price: '750 000 F', rate: 'Des 12 000 F' },
+];
+
 const POSTES = [
   'Developpeur Full-Stack', 'Agent Commercial', 'Livreur',
   'Service Client', 'Marketing Digital', 'Comptable', 'Autre',
@@ -45,6 +60,20 @@ export default function Home() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState('');
+  const [productIndex, setProductIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setProductIndex(prev => (prev + 3) % MOCK_PRODUCTS.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
+  const visibleProducts = [
+    MOCK_PRODUCTS[productIndex % MOCK_PRODUCTS.length],
+    MOCK_PRODUCTS[(productIndex + 1) % MOCK_PRODUCTS.length],
+    MOCK_PRODUCTS[(productIndex + 2) % MOCK_PRODUCTS.length],
+  ];
 
   const isFormValid = formData.nom.trim() && formData.email.trim() && formData.poste;
 
@@ -158,18 +187,12 @@ export default function Home() {
                   </div>
                 </div>
                 <div style={{ color: 'rgba(255,255,255,.3)', fontSize: 10, fontWeight: 600 }}>PRODUITS POPULAIRES</div>
-                <div style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Ecouteurs Bluetooth</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>15 000 F</div></div>
-                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>Des 500 F</div></div>
-                </div>
-                <div style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Chaussures Sport</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>22 500 F</div></div>
-                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>Des 750 F</div></div>
-                </div>
-                <div style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Sac a main</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>39 000 F</div></div>
-                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>Des 1 300 F</div></div>
-                </div>
+                {visibleProducts.map((p, i) => (
+                  <div key={`${p.name}-${productIndex}-${i}`} style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'opacity 0.4s ease', animation: 'fadeInProduct 0.5s ease' }}>
+                    <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>{p.name}</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>{p.price}</div></div>
+                    <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>{p.rate}</div></div>
+                  </div>
+                ))}
                 <div style={{ marginTop: 'auto', background: '#F5C800', borderRadius: 10, padding: 11, textAlign: 'center', color: '#111D4A', fontWeight: 800, fontSize: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
                   <ShoppingCart size={13} /> Commander maintenant
                 </div>
@@ -415,6 +438,7 @@ export default function Home() {
 
       <style jsx global>{`
         @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes fadeInProduct { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes carousel { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
         .hero-phone-col { display: none; }
