@@ -11,10 +11,10 @@ import {
 import { supabase } from '@/lib/supabase';
 
 const NEWS = [
-  "Ufami lance sa plateforme BNPL en Cote d'Ivoire",
+  "Ufami, la 1ere plateforme d'achat echelonne en Cote d'Ivoire",
   'MyGUA disponible sur Play Store pour les vendeurs',
   "Nouveau partenariat avec +50 boutiques a Abidjan",
-  'Payez en 30 tranches journalieres sans frais caches',
+  'Payez a partir de 500 F, jusqu a 180 jours pour finaliser votre achat',
   'Plus de 1 000 produits disponibles sur ufami.ci',
   "Devenez vendeur partenaire Ufami des aujourd'hui",
 ];
@@ -113,14 +113,23 @@ export default function Home() {
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 7, background: 'rgba(245,200,0,.14)', border: '1px solid rgba(245,200,0,.35)', borderRadius: 20, padding: '5px 14px', marginBottom: 22 }}>
               <MapPin size={13} color="#F5C800" />
-              <span style={{ color: '#F5C800', fontSize: 12, fontWeight: 600 }}>Disponible en Cote d'Ivoire</span>
+              <span style={{ color: '#F5C800', fontSize: 12, fontWeight: 600 }}>1ere plateforme d'achat echelonne en Cote d'Ivoire</span>
             </div>
             <h1 style={{ color: '#fff', fontSize: 38, fontWeight: 900, lineHeight: 1.15, marginBottom: 18 }}>
-              Achetez maintenant,<br /><span style={{ color: '#F5C800' }}>payez en 30 jours</span>
+              Payez a partir de 500 F,<br /><span style={{ color: '#F5C800' }}>recevez votre produit</span>
             </h1>
             <p style={{ color: 'rgba(255,255,255,.65)', fontSize: 16, lineHeight: 1.75, marginBottom: 32, maxWidth: 440 }}>
-              La premiere plateforme BNPL de Cote d'Ivoire. Obtenez vos produits aujourd'hui et payez en tranches journalieres via mobile money.
+              La premiere plateforme d'achat echelonne de Cote d'Ivoire. Payez progressivement a partir de 500 F, sur une periode allant jusqu'a 180 jours, et recevez votre produit une fois le paiement termine.
             </p>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(245,200,0,.3)', borderRadius: 12, padding: '10px 16px', marginBottom: 28 }}>
+              <div style={{ width: 34, height: 34, background: '#F5C800', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <span style={{ color: '#111D4A', fontWeight: 900, fontSize: 15 }}>500F</span>
+              </div>
+              <div>
+                <div style={{ color: '#fff', fontSize: 13, fontWeight: 700 }}>C'est tout ce qu'il vous faut pour commencer</div>
+                <div style={{ color: 'rgba(255,255,255,.45)', fontSize: 11 }}>Jusqu a 180 jours pour finaliser votre paiement.</div>
+              </div>
+            </div>
             <div style={{ display: 'flex', gap: 14, marginBottom: 40, flexWrap: 'wrap' }}>
               <a href="https://play.google.com/store/apps/details?id=com.ufami.general" style={{ background: '#F5C800', color: '#111D4A', border: 'none', padding: '11px 20px', borderRadius: 9, fontWeight: 800, fontSize: 13, cursor: 'pointer', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 7 }}>
                 <Play size={15} />
@@ -132,9 +141,9 @@ export default function Home() {
               </a>
             </div>
             <div style={{ display: 'flex', gap: 36 }}>
-              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>1 000+</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Produits</div></div>
-              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>50+</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Vendeurs</div></div>
-              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>0%</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Frais caches</div></div>
+              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>500 F</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Montant minimum</div></div>
+              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>180j</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Periode max</div></div>
+              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>1ere</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>En Cote d'Ivoire</div></div>
             </div>
           </div>
 
@@ -150,16 +159,16 @@ export default function Home() {
                 </div>
                 <div style={{ color: 'rgba(255,255,255,.3)', fontSize: 10, fontWeight: 600 }}>PRODUITS POPULAIRES</div>
                 <div style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>iPhone 15 Pro</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>575 000 F</div></div>
-                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>19 167 F/j</div></div>
+                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Ecouteurs Bluetooth</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>15 000 F</div></div>
+                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>Des 500 F</div></div>
                 </div>
                 <div style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Samsung TV 55"</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>285 000 F</div></div>
-                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>9 500 F/j</div></div>
+                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Chaussures Sport</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>22 500 F</div></div>
+                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>Des 750 F</div></div>
                 </div>
                 <div style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Machine a laver</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>165 000 F</div></div>
-                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>5 500 F/j</div></div>
+                  <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>Sac a main</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>39 000 F</div></div>
+                  <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>Des 1 300 F</div></div>
                 </div>
                 <div style={{ marginTop: 'auto', background: '#F5C800', borderRadius: 10, padding: 11, textAlign: 'center', color: '#111D4A', fontWeight: 800, fontSize: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
                   <ShoppingCart size={13} /> Commander maintenant
@@ -192,9 +201,9 @@ export default function Home() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 18 }}>
             {[
               { icon: LayoutGrid, num: 1, title: 'Parcourez', desc: 'Decouvrez des milliers de produits sur ufami.ci ou l\'application mobile' },
-              { icon: CreditCard, num: 2, title: 'Choisissez', desc: 'Optez pour le paiement cash ou echelonne en 30 tranches journalieres' },
+              { icon: CreditCard, num: 2, title: 'Choisissez', desc: 'Optez pour le paiement cash ou echelonne, des 500 F, sur une periode allant jusqu a 180 jours' },
               { icon: Smartphone, num: 3, title: 'Payez', desc: 'Via Orange Money, Wave, MTN MoMo ou Moov Money en quelques secondes' },
-              { icon: HomeIcon, num: 4, title: 'Recevez', desc: 'Livraison a domicile ou retrait gratuit en agence Ufami a Abidjan' },
+              { icon: HomeIcon, num: 4, title: 'Recevez', desc: 'Une fois votre paiement termine, votre produit vous est livre ou disponible en agence' },
             ].map(step => (
               <div key={step.num} style={{ background: '#fff', borderRadius: 16, padding: 26, border: '1px solid #E5E7EB', textAlign: 'center', position: 'relative' }}>
                 <div style={{ position: 'absolute', top: 14, right: 14, width: 24, height: 24, background: '#111D4A', color: '#F5C800', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 11, fontWeight: 900 }}>{step.num}</div>
@@ -223,9 +232,9 @@ export default function Home() {
                 <div style={{ width: 52, height: 52, background: '#F5C800', borderRadius: 14, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 18, color: '#111D4A' }}><ShoppingBag size={24} /></div>
                 <div style={{ fontSize: 10, fontWeight: 600, color: 'rgba(255,255,255,.4)', marginBottom: 5, display: 'flex', alignItems: 'center', gap: 5 }}><Users size={11} /> POUR LES ACHETEURS</div>
                 <div style={{ fontSize: 26, fontWeight: 900, color: '#fff', marginBottom: 11 }}>Ufami App</div>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,.65)', lineHeight: 1.65, marginBottom: 22 }}>Achetez sur credit, payez en 30 tranches journalieres. Livraison a Abidjan et partout en Cote d'Ivoire.</p>
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,.65)', lineHeight: 1.65, marginBottom: 22 }}>Choisissez un produit, mettez de cote a votre rythme des 500 F, sur une periode allant jusqu a 180 jours. Vous recevez des que le paiement est termine.</p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 26 }}>
-                  {['Catalogue de 1 000+ produits', 'Orange Money, Wave, MTN, Moov', 'Suivi commandes en temps reel', 'Score de credit personnalise'].map(f => (
+                  {['Catalogue de 1 000+ produits', "Des 500 F, aucun apport exige", 'Orange Money, Wave, MTN, Moov', 'Suivi de votre paiement en temps reel'].map(f => (
                     <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 9, fontSize: 13, color: 'rgba(255,255,255,.8)' }}>
                       <div style={{ width: 18, height: 18, background: '#F5C800', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, color: '#111D4A' }}><Check size={11} /></div>
                       {f}
@@ -267,8 +276,8 @@ export default function Home() {
           {[
             { icon: Package, val: '1 000+', label: 'Produits disponibles' },
             { icon: Store, val: '50+', label: 'Vendeurs partenaires' },
-            { icon: Calendar, val: '30', label: 'Tranches journalieres' },
-            { icon: Truck, val: '24h', label: 'Delai de livraison' },
+            { icon: Calendar, val: '500 F', label: 'Montant minimum' },
+            { icon: Truck, val: '180j', label: 'Periode maximum' },
           ].map(s => (
             <div key={s.label}>
               <div style={{ color: '#F5C800', fontSize: 36, fontWeight: 900, lineHeight: 1 }}>{s.val}</div>
@@ -405,17 +414,22 @@ export default function Home() {
       </footer>
 
       <style jsx global>{`
-        .hero-phone-col { display: flex; justify-content: center; margin-top: 32px; }
+        @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes carousel { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .hero-phone-col { display: none; }
         @media (min-width: 768px) {
           .nav-links-desktop { display: flex !important; }
           .show-mobile { display: none !important; }
           .hero-grid { grid-template-columns: 1fr .85fr !important; }
-          .hero-phone-col { margin-top: 0; }
+          .hero-phone-col { display: block !important; }
         }
         @media (max-width: 767px) {
           .hide-mobile { display: none; }
           .form-row { grid-template-columns: 1fr !important; }
         }
+        .animate-spin { animation: spin 1s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
       `}</style>
     </div>
   );
