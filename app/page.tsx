@@ -145,14 +145,14 @@ export default function Home() {
               <span style={{ color: '#F5C800', fontSize: 12, fontWeight: 600 }}>1ere plateforme d'achat echelonne en Cote d'Ivoire</span>
             </div>
             <h1 style={{ color: '#fff', fontSize: 38, fontWeight: 900, lineHeight: 1.15, marginBottom: 18 }}>
-              Payez a partir de 500 F,<br /><span style={{ color: '#F5C800' }}>recevez votre produit</span>
+              Fini les fins de mois<br /><span style={{ color: '#F5C800' }}>qui font peur</span>
             </h1>
             <p style={{ color: 'rgba(255,255,255,.65)', fontSize: 16, lineHeight: 1.75, marginBottom: 32, maxWidth: 440 }}>
               La premiere plateforme d'achat echelonne de Cote d'Ivoire. Payez progressivement a partir de 500 F, sur une periode allant jusqu'a 180 jours, et recevez votre produit une fois le paiement termine.
             </p>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(245,200,0,.3)', borderRadius: 12, padding: '10px 16px', marginBottom: 28 }}>
-              <div style={{ width: 34, height: 34, background: '#F5C800', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                <span style={{ color: '#111D4A', fontWeight: 900, fontSize: 15 }}>500F</span>
+              <div style={{ minWidth: 52, height: 34, padding: '0 10px', background: '#F5C800', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <span style={{ color: '#111D4A', fontWeight: 900, fontSize: 14, whiteSpace: 'nowrap' }}>500 F</span>
               </div>
               <div>
                 <div style={{ color: '#fff', fontSize: 13, fontWeight: 700 }}>C'est tout ce qu'il vous faut pour commencer</div>
@@ -172,29 +172,34 @@ export default function Home() {
             <div style={{ display: 'flex', gap: 36 }}>
               <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>500 F</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Montant minimum</div></div>
               <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>180j</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Periode max</div></div>
-              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>1ere</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>En Cote d'Ivoire</div></div>
+              <div><div style={{ color: '#F5C800', fontSize: 28, fontWeight: 900, lineHeight: 1 }}>0 F</div><div style={{ color: 'rgba(255,255,255,.4)', fontSize: 12, marginTop: 3 }}>Frais cache</div></div>
             </div>
           </div>
 
           <div className="hero-phone-col">
-            <div style={{ width: 230, height: 460, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 36, padding: 16, margin: '0 auto', animation: 'float 4s ease-in-out infinite' }}>
-              <div style={{ background: 'rgba(255,255,255,.04)', borderRadius: 22, height: '100%', padding: 13, display: 'flex', flexDirection: 'column', gap: 9 }}>
-                <div style={{ background: 'rgba(17,29,74,.8)', borderRadius: 12, padding: 12 }}>
+            <div style={{ width: 230, height: 500, background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.12)', borderRadius: 36, padding: 16, margin: '0 auto', animation: 'float 4s ease-in-out infinite', overflow: 'hidden' }}>
+              <div style={{ background: 'rgba(255,255,255,.04)', borderRadius: 22, height: '100%', padding: 12, display: 'flex', flexDirection: 'column', gap: 7, overflow: 'hidden' }}>
+                <div style={{ background: 'rgba(17,29,74,.8)', borderRadius: 12, padding: 10, flexShrink: 0 }}>
                   <div style={{ color: 'rgba(255,255,255,.4)', fontSize: 10, marginBottom: 3 }}>Bonjour Kouassi</div>
                   <div style={{ color: '#fff', fontSize: 15, fontWeight: 800 }}>Que cherchez-vous ?</div>
                   <div style={{ background: 'rgba(255,255,255,.1)', borderRadius: 6, padding: '6px 10px', marginTop: 8, color: 'rgba(255,255,255,.3)', fontSize: 11, display: 'flex', alignItems: 'center', gap: 5 }}>
                     <Search size={11} /> Rechercher...
                   </div>
                 </div>
-                <div style={{ color: 'rgba(255,255,255,.3)', fontSize: 10, fontWeight: 600 }}>PRODUITS POPULAIRES</div>
+                <div style={{ color: 'rgba(255,255,255,.3)', fontSize: 9, fontWeight: 600, flexShrink: 0 }}>PRODUITS POPULAIRES</div>
                 {visibleProducts.map((p, i) => (
-                  <div key={`${p.name}-${productIndex}-${i}`} style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: 9, display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'opacity 0.4s ease', animation: 'fadeInProduct 0.5s ease' }}>
-                    <div><div style={{ color: '#fff', fontSize: 11, fontWeight: 600 }}>{p.name}</div><div style={{ color: '#F5C800', fontSize: 10, fontWeight: 700 }}>{p.price}</div></div>
-                    <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 7px' }}><div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800 }}>{p.rate}</div></div>
+                  <div key={`${p.name}-${productIndex}-${i}`} style={{ background: 'rgba(255,255,255,.07)', borderRadius: 10, padding: '7px 9px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', transition: 'opacity 0.4s ease', animation: 'fadeInProduct 0.5s ease', flexShrink: 0, minHeight: 38 }}>
+                    <div style={{ minWidth: 0, flex: 1, overflow: 'hidden' }}>
+                      <div style={{ color: '#fff', fontSize: 10, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{p.name}</div>
+                      <div style={{ color: '#F5C800', fontSize: 9, fontWeight: 700, whiteSpace: 'nowrap' }}>{p.price}</div>
+                    </div>
+                    <div style={{ background: '#F5C800', borderRadius: 5, padding: '3px 6px', flexShrink: 0, marginLeft: 6 }}>
+                      <div style={{ color: '#111D4A', fontSize: 8, fontWeight: 800, whiteSpace: 'nowrap' }}>{p.rate}</div>
+                    </div>
                   </div>
                 ))}
-                <div style={{ marginTop: 'auto', background: '#F5C800', borderRadius: 10, padding: 11, textAlign: 'center', color: '#111D4A', fontWeight: 800, fontSize: 12, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5 }}>
-                  <ShoppingCart size={13} /> Commander maintenant
+                <div style={{ marginTop: 'auto', background: '#F5C800', borderRadius: 10, padding: 10, textAlign: 'center', color: '#111D4A', fontWeight: 800, fontSize: 11, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 5, flexShrink: 0, whiteSpace: 'nowrap' }}>
+                  <ShoppingCart size={12} /> Commander maintenant
                 </div>
               </div>
             </div>
